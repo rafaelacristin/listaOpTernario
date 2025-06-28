@@ -1,17 +1,17 @@
 <meta charset="UTF-8">
 <script>
 
-    let anoNascimento = parseInt(prompt("Digite o ano de nascimento:"));
+const anoNascimento =(prompt("Digite o ano de nascimento:"));
 
     let anoAtual = new Date().getFullYear();
     let idade = anoAtual - anoNascimento;
     let podeVotar = idade >= 16;
 
-    if (podeVotar) {
-        alert("Você PODE votar neste ano.");
-    } else {
+    (podeVotar) ?
+        alert("Você PODE votar neste ano.")
+    :
         alert("Você NÃO pode votar neste ano.");
-    }
+    
 
 
 
