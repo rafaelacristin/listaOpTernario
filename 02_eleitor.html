@@ -6,17 +6,15 @@
     // Ignore mês e dia de nascimento.
 
     // Entrada
-    const anoAtual = new Date().getFullYear();
     const nascimento = Number(prompt("Informe seu ano de nascimento:"));
+    const idade = 2025 - nascimento;
+    let mensagemFinal;
 
     // Processamento
-    const idade = anoAtual - nascimento;
-    const podeVotar = idade >= 16;
+    (idade >= 16) ? mensagemFinal = `Você já pode votar!`
+    : mensagemFinal = `Você ainda não pode votar!`
 
     // Saída
-    const mensagem = podeVotar
-        ? `Você tem ${idade} anos e já pode votar.`
-        : `Você tem ${idade} anos e ainda não pode votar.`;
-
-    alert(mensagem);
+   alert(mensagemFinal);
+   
 </script>
