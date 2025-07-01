@@ -5,10 +5,13 @@
 
     //Entrada
 
+let idade = Number(prompt("informe a sua idade"));
+let mensagem;
 
     //Processamento
-
+(idade >= 18) ? mensagem = `voce ja chegou a maior idade`
+: mensagem = `voce ainda não atingiu a maior idade faltam ${18 - idade} anos `;
 
     //Saída
-
+alert(mensagem);
 </script>
