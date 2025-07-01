@@ -3,15 +3,14 @@
     // Problema: Maior 2 com operador ternário
     // Lê dois números inteiros e mostra o maior usando ternário
 
-    // Entrada
-    const num1 = Number(prompt("Digite o primeiro número:"));
-    const num2 = Number(prompt("Digite o segundo número:"));
+    const num1 = Number(prompt("Digite o primeiro número inteiro:"));
+    const num2 = Number(prompt("Digite o segundo número inteiro:"));
 
-    // Processamento + Saída com ternário
-    const mensagem = num1 > num2 
-        ? `O maior número é: ${num1}`
+    const resultado = num1 > num2 
+        ? `O maior número é: ${num1}` 
         : num2 > num1 
-            ? `O maior número é: ${num2}`
+            ? `O maior número é: ${num2}` 
             : "Os dois números são iguais.";
 
-    alert(mensagem);
+    alert(resultado);
+</script>
