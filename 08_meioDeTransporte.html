@@ -1,17 +1,22 @@
 <meta charset="UTF-8">
 <script>
-    //Problema: Meio de transporte mais barato
-    // Faça um script que peça para o usuário informar o preço do litro do combustível e a quantidade de litros utilizados para se deslocar para o trabalho diariamente.
-    // Peça também ao programa para o usuário informar o preço do transporte público que deverá pagar para se deslocar ao trabalho diariamente.
-    // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
+    // Problema: Meio de transporte mais barato com operador ternário
 
-    //Entrada
+    // Entrada
+    const precoCombustivel = Number(prompt("Informe o preço do litro do combustível (R$):"));
+    const litrosDiarios = Number(prompt("Informe a quantidade de litros usados para ir e voltar do trabalho por dia:"));
+    const precoTransporte = Number(prompt("Informe o preço diário do transporte público (ida e volta):"));
 
+    // Processamento
+    const custoCarro = precoCombustivel * litrosDiarios;
+    const custoTransporte = precoTransporte;
 
-    //Processamento
+    // Saída com ternário
+    const mensagem = (custoCarro < custoTransporte) 
+        ? `O meio de transporte mais barato é o carro.\nCusto diário: R$ ${custoCarro.toFixed(2)}`
+        : (custoTransporte < custoCarro) 
+            ? `O meio de transporte mais barato é o transporte público.\nCusto diário: R$ ${custoTransporte.toFixed(2)}`
+            : `Os dois meios têm o mesmo custo diário: R$ ${custoCarro.toFixed(2)}`;
 
-    
-    //Saída
-
-    
+    alert(mensagem);
 </script>

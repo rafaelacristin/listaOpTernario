@@ -1,18 +1,19 @@
 <meta charset="UTF-8">
 <script>
-    //Problema: Calcular valor da hora trabalhada
-    // Faça um script que peça para o usuário informar a quantidade de horas trabalhadas semanalmente e quanto que recebe por hora trabalhada.
-    // Se o total de horas trabalhadas for até 45 horas (inclusive), não haverá adicional.
-    // Se o total de horas trabalhadas for até 60 horas (inclusive), haverá adicional de 20%.
-    // Se o total de horas trabalhadas ultrapassar 60 horas, haverá adicional de 30%.
-    // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
+    // Problema: Calcular valor da hora trabalhada com operador ternário
 
-    //Entrada
+    // Entrada
+    const horas = Number(prompt("Informe a quantidade de horas trabalhadas na semana:"));
+    const valorHora = Number(prompt("Informe quanto recebe por hora trabalhada (R$):"));
 
+    // Processamento com ternário para definir percentual de adicional
+    const adicionalPercentual = (horas <= 45) ? 0 :
+                               (horas <= 60) ? 20 :
+                               30;
 
-    //Processamento
+    const valorHoraComAdicional = valorHora * (1 + adicionalPercentual / 100);
+    const salarioFinal = valorHoraComAdicional * horas;
 
-    
-    //Saída
-
+    // Saída
+    alert(`Salário final semanal: R$ ${salarioFinal.toFixed(2)}\nPreço da hora trabalhada com adicional: R$ ${valorHoraComAdicional.toFixed(2)}`);
 </script>

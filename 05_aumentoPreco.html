@@ -1,18 +1,30 @@
 <meta charset="UTF-8">
 <script>
-    //Problema: Aumento de Preço
-    //Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
-        //- até 280(inclusive): aumento de 20 %
-        //- até 700(inclusive): aumento de 15 %
-        //- até 1500(inclusive): aumento de 10 %
-        //- acima de 1500: aumento de 5 %
-    
-    //Entrada
+    // Problema: Aumento de Preço
+    // Recebe o preço do produto e calcula o aumento do preço com base em faixas
 
+    // Entrada
+    const preco = Number(prompt("Informe o preço do produto:"));
 
-    //Processamento
+    // Processamento
+    let percentual;
 
-    
-    //Saída
+    if (preco <= 280) {
+        percentual = 20;
+    } else if (preco <= 700) {
+        percentual = 15;
+    } else if (preco <= 1500) {
+        percentual = 10;
+    } else {
+        percentual = 5;
+    }
 
+    const aumento = preco * (percentual / 100);
+    const novoPreco = preco + aumento;
+
+    // Saída
+    alert("Preço original: R$ " + preco.toFixed(2) +
+          "\nPercentual de aumento: " + percentual + "%" +
+          "\nValor do aumento: R$ " + aumento.toFixed(2) +
+          "\nNovo preço: R$ " + novoPreco.toFixed(2));
 </script>
