@@ -1,20 +1,22 @@
 <meta charset="UTF-8">
 <script>
-    //Problema: Balanço financeiro
-    // Faça um script que peça para o usuário informar as despesas relacionadas com:
-    // - Conta de água
-    // - Conta de energia elétrica
-    // - Conta de telefone
-    // - Supermercado
-    // Também peça para o usuário informar o valor que recebe de remuneração mensal (salário), proveniente da sua atuação profissional.
-    // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
+    // Problema: Balanço financeiro com operador ternário
 
-    //Entrada
+    // Entrada
+    const agua = Number(prompt("Informe o valor da conta de água: R$"));
+    const energia = Number(prompt("Informe o valor da conta de energia elétrica: R$"));
+    const telefone = Number(prompt("Informe o valor da conta de telefone: R$"));
+    const supermercado = Number(prompt("Informe o valor gasto no supermercado: R$"));
+    const salario = Number(prompt("Informe o valor do seu salário mensal: R$"));
 
+    // Processamento
+    const totalDespesas = agua + energia + telefone + supermercado;
+    const saldo = salario - totalDespesas;
 
-    //Processamento
+    // Saída com ternário
+    const mensagem = saldo >= 0
+        ? `Parabéns! Após pagar todas as contas, sobrou R$ ${saldo.toFixed(2)}.`
+        : `Ops! Faltaram R$ ${Math.abs(saldo).toFixed(2)} para pagar todas as contas.`;
 
-    
-    //Saída
-    
+    alert(mensagem);
 </script>
