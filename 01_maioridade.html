@@ -1,14 +1,18 @@
 <meta charset="UTF-8">
 <script>
-    // Problema: Maioridade
+    /*PROBLEMA: CALCULADORA - SOMA
+    Crie um programa que peça ao usuário para inserir dois números.
+    O programa deve calcular a soma desses dois números e exibir o resultado
+    em um alerta na tela com a mensagem: "A soma dos números é: [resultado]".
+    */
 
-    // Entrada
-    const idade =(prompt("informe a sua idade:"));
+    //ENTRADA
+const n1 = Number(prompt(`Informe o primeiro numero:`));
+const n2 = Number(prompt(`Informe o segundo numero`));
+    //PROCESSAMENTO
 
-    // Processamento e Saída
-     (idade >= 18) ?
-        alert("Você já é maior de idade.");
-    :
-        alert("Você ainda não é maior de idade. Faltam " + (18 - idade) + " anos.");
-    
+const soma = n1 + n2
+    //SAÍDA
+    document.write(`A soma dos doisa numeros é ${soma}!`);
+
 </script>
