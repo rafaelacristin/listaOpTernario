@@ -1,16 +1,23 @@
 <meta charset="UTF-8">
 <script>
-    // Problema: Maior 2 com operador ternário
-    // Lê dois números inteiros e mostra o maior usando ternário
 
-    const num1 = Number(prompt("Digite o primeiro número inteiro:"));
-    const num2 = Number(prompt("Digite o segundo número inteiro:"));
+/*
+PROBLEMA: MAIOR DE DOIS NÚMEROS
+Construa um algoritmo que leia dois números inteiros. Verifique qual dos dois números é maior e o escreva.
+*/
 
-    const resultado = num1 > num2 
-        ? `O maior número é: ${num1}` 
-        : num2 > num1 
-            ? `O maior número é: ${num2}` 
-            : "Os dois números são iguais.";
+//ENTRADA
 
-    alert(resultado);
+const numb1 = Number(prompt(`Informe um número`));
+const numb2 = Number(prompt(`Informe outro número`));
+
+//PROCESSAMENTO
+
+let mensagemFinal = "";
+(numb1 > numb2) ? mensagemFinal = `${numb1}, ${numb2}` : mensagemFinal = `${numb2}, ${numb1}`;
+    
+//SAÍDA
+
+document.write(mensagemFinal);
+    
 </script>

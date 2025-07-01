@@ -1,18 +1,30 @@
 <meta charset="UTF-8">
 <script>
-    // Problema: Vogal
-    // Construa um programa que leia um caractere e informe se este caractere é uma vogal.
 
-    // Entrada
-    const letra = prompt("Digite uma letra:").toLowerCase();
+/*
+PROBLEMA: AUMENTO DE PREÇO
+Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
+- até 280(inclusive): aumento de 20 %
+- até 700(inclusive): aumento de 15 %
+- até 1500(inclusive): aumento de 10 %
+- acima de 1500: aumento de 5 %
+*/
 
-    // Processamento
-    const ehVogal = letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u';
+//ENTRADA
 
-    // Saída
-    const mensagem = ehVogal 
-        ? "É uma vogal." 
-        : "Não é uma vogal.";
+const preco = Number(prompt(`Qual o preço do produto?`));
 
-    alert(mensagem);
+//PROCESSAMENTO
+
+const cinco = preco * 0.05;
+const dez = preco * 0.1;
+const quinze = preco * 0.15;
+const vinte = preco * 0.2;
+
+let mensagemFinal = "";
+(preco > 1500) ? mensagemFinal = `O produto aumentou R$${cinco}` : (preco <= 1500) ? mensagemFinal = `O produto aumentou R$${dez}` : (preco <= 700) ? mensagemFinal = `O produto aumentou R$${quinze}` :  mensagemFinal = `O produto aumentou R$${vinte}`;
+    
+//SAÍDA
+
+alert(mensagemFinal);
 </script>

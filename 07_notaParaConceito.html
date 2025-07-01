@@ -1,17 +1,26 @@
 <meta charset="UTF-8">
 <script>
-    // Problema: Nota para Conceito com operador ternário
+/*
+PROBLEMA: NOTA PARA CONCEITO
+Converta a nota para conceito, conforme a tabela abaixo:
+Nota                     Conceito
+Entre 10.0 e 9.0            A
+Entre 8.9 e 8.0             B
+Entre 7.9 e 7.0             C
+Entre 6.9 e 6.0             D
+Entre 5.9 e zero            E
+*/
 
-    // Entrada
-    const nota = Number(prompt("Informe a nota (0 a 10):"));
+//ENTRADA
 
-    // Processamento + Saída
-    const conceito = (nota >= 9 && nota <= 10) ? "A" :
-                     (nota >= 8 && nota < 9) ? "B" :
-                     (nota >= 7 && nota < 8) ? "C" :
-                     (nota >= 6 && nota < 7) ? "D" :
-                     (nota >= 0 && nota < 6) ? "E" :
-                     "Nota inválida";
+const nota = Number(prompt(`Qual foi sua nota?`));
 
-    alert(`Sua nota é: ${nota.toFixed(1)}\nConceito: ${conceito}`);
+//PROCESSAMENTO
+
+let mensagemFinal = ``;
+(nota >= 9 && nota <= 10) ? mensagemFinal = `Seu conceito é A` : (nota <= 8.9 && nota >= 8) ? mensagemFinal = `Seu conceito é B` : (nota <= 7.9 && nota >= 7) ? mensagemFinal = `Seu conceito é C` : (nota <= 6.9 && nota >= 6) ? mensagemFinal = `Seu conceito é D` : (nota <= 5.9 && nota >= 0) ? mensagemFinal = `Seu conceito é E` : mensagemFinal = `Digite um número válido`;
+
+//SAÍDA
+
+alert(mensagemFinal);
 </script>
